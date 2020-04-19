@@ -57,13 +57,13 @@ class TarefaController extends Controller
      */
     public function show($id)
     {
-        $curso = Curso::find($id);
-        if ($curso) {
-            return view ('cursos.show', [
-                'curso' => $curso
+        $tarefa = Tarefa::find($id);
+        if ($tarefa) {
+            return view ('tarefas.show', [
+                'tarefa' => $tarefa
             ]);
         }
-        return redirect()->route('cursos.index');
+        return redirect()->route('tarefas.index');
     }
 
     /**

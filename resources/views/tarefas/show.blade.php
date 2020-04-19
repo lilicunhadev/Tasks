@@ -15,11 +15,37 @@
 
         <div class="home">
             <label class="lista">
-                    Sistema de Lista de Tarefas
+                    Exibir Tarefa
             </label>
         </div>
 
         <br/>
+
+        
+            <div class="card-body">
+        
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label>Título da Tarefa:</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <label style="color:blue;">{{$tarefa->titulo}}</label>
+                    </div>
+                </div>
+        
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label>Resolvido:</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <label style="color:blue;">@if ($tarefa->resolvido==1) SIM @else NÃO @endif</label>
+                    </div>
+                </div>
+                    
+                </div>
+        
+            </div>
+        
 
         <div class="botao">
             <a href="/tarefas">
