@@ -1,0 +1,38 @@
+body {
+    background-color: papayawhip;
+}
+
+.home {
+    width: 500px;
+    height: 50px;
+    border: 3px solid;
+    border-color:gray;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    left:50%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+}
+
+.tabela{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}

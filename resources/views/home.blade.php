@@ -2,7 +2,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Editar Tarefa</title>
+        <title>Sistema de Lista de Tarefas</title>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,42 +15,19 @@
 
         <div class="home">
             <label class="lista">
-                    Editar Tarefa
+                    Sistema de Lista de Tarefas
             </label>
         </div>
 
         <br/>
 
-        <form action="{{route('tarefas.update', ['tarefa'=>$tarefa->id])}}" method="POST" class="form-horizontal">
-            <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}" />
-                    @method('PUT')
-                    @csrf
-
-            <div class="form-group formulario">
-              <label for="titulo"><strong>Título da Tarefa</strong></label>
-              <input type="text" name="titulo" class="form-control" id="titulo"
-                value="{{$tarefa->titulo}}">
-            </div>
-    
-            </div>
-                <div class="botao">
-                    <button type="submit" class="btn btn-primary">
-                        Salvar
-                    </button>
-                </div>
-          </form>
-
-          <br/>
-
-          <div class="botao">
+        <div class="botao">
             <a href="/tarefas">
-                <button type="button" class="btn btn-secondary">
+                <button type="button" class="btn btn-primary">
                     Listagem das Tarefas
                 </button>
             </a>
         </div>
-
-        
         
     </body>
 

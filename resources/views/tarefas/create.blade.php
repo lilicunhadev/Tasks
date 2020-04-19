@@ -2,7 +2,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Editar Tarefa</title>
+        <title>Criar Nova Tarefa</title>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,27 +15,25 @@
 
         <div class="home">
             <label class="lista">
-                    Editar Tarefa
+                    Criar Nova Tarefa
             </label>
         </div>
 
         <br/>
 
-        <form action="{{route('tarefas.update', ['tarefa'=>$tarefa->id])}}" method="POST" class="form-horizontal">
+        <form action="{{route('tarefas.store')}}" method="POST" class="form-horizontal">
             <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}" />
-                    @method('PUT')
-                    @csrf
+            @csrf
 
             <div class="form-group formulario">
               <label for="titulo"><strong>Título da Tarefa</strong></label>
-              <input type="text" name="titulo" class="form-control" id="titulo"
-                value="{{$tarefa->titulo}}">
+              <input type="text" name="titulo" class="form-control" id="titulo">
             </div>
     
             </div>
                 <div class="botao">
                     <button type="submit" class="btn btn-primary">
-                        Salvar
+                        Cadastrar Tarefa
                     </button>
                 </div>
           </form>

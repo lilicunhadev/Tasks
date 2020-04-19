@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTarefas extends Migration
+class CreateTarefasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,7 @@ class CreateTarefas extends Migration
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo', 100);
-            $table->tinyInteger('resolvido')->default("0");
+            $table->boolean('resolvido')->default(false);
         });
     }
 
